@@ -1,0 +1,135 @@
+$cookie-compliance--background-color: #3c3c3b;
+$color--link: #ff0;
+$cookie-compliance--border-color: #999;
+
+// Some bootstrap variables we use.
+$screen-md: 720px;
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.cookie_compliance {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__hidden {
+    animation: slide 1s;
+    animation-fill-mode: forwards;
+  }
+
+  &__inner_wrapper {
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    background-color: $cookie-compliance--background-color;
+    max-width: 770px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content_container {
+    padding: 15px;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid $cookie-compliance--border-color;
+
+    p {
+      font-size: 15px;
+      line-height: 1.27;
+    }
+
+    &--link {
+      color: $color--link !important;
+      &:before,
+      &:after {
+        background-color: $color--link !important;
+      }
+    }
+  }
+
+  &__button {
+    text-align: center;
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--agree {
+      border: 1px solid $cookie-compliance--border-color;
+      border-width: 0 1px 0 0;
+    }
+
+    &:hover {
+      color: $color--link;
+      cursor: pointer;
+      transition: color 0.15s ease-in-out;
+    }
+  }
+
+  &__buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: bold;
+    color: white;
+    transition: color 0.15s ease-in-out;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    padding: 30px;
+
+    &__inner_wrapper {
+      line-height: 1.56;
+      flex-direction: row;
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    &__content_container {
+      border-bottom: 0;
+      border-right: 1px solid $cookie-compliance--border-color;
+      padding: 20px 30px;
+    }
+
+    &__button {
+      padding: 15px 30px;
+      width: 100%;
+      height: 50%;
+
+      &--agree {
+        border-width: 0 0 1px 0;
+      }
+    }
+
+    &__buttons-container {
+      flex-direction: column;
+      cursor: pointer;
+      overflow: hidden;
+      width: auto;
+      font-size: 18px;
+      line-height: 28px;
+      justify-content: space-evenly;
+    }
+  }
+}
