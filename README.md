@@ -1,6 +1,6 @@
 # @uncinc/react-cookie-compliance
 
-> TODO
+GDPR friendly cookie compliance popup to prompt the user for consent.
 
 [![NPM](https://img.shields.io/npm/v/@uncinc/react-cookie-compliance.svg)](https://www.npmjs.com/package/@uncinc/react-cookie-compliance) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -13,8 +13,17 @@
 
 ```jsx
 import React, { Component } from 'react';
+import { combineReducers } from 'redux-immutable';
 
 import CookieCompliancePopup, { cookieComplianceReducer } from '@uncinc/react-cookie-compliance';
+
+# Add the reducer.
+const rootReducer = combineReducers({
+  cookieCompliance: cookieComplianceReducer,
+  ...
+});
+
+...
 
 class Example extends Component {
   render () {
@@ -34,12 +43,6 @@ class Example extends Component {
   }
 }
 
-...
-
-# Add the reducer.
-const rootReducer = combineReducers({
-  cookieCompliance: cookieComplianceReducer,
-});
 ```
 
 # Development
@@ -58,7 +61,7 @@ component, this does not work because it will use react-redux from
 dev-dependencies instead of the react-redux from the main app. Besides, using
 `npm pack` emulates a package at its best.
 
-1) In the root run `npm pack`, this will generate <package-name>-<package-version>.tgz
+1) In the root run `npm pack`, this will generate `<package-name>-<package-version>.tgz`
 
 2) Go to your main app (where you use this package) and run:
 
@@ -79,8 +82,6 @@ Run `npm publish`.
 Make sure that any npm modules you want as peer dependencies are properly marked
 as `peerDependencies` in `package.json`. The rollup config will automatically
 recognize them as peers and not try to bundle them in your module.
-
-
 
 ## License
 
