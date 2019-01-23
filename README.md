@@ -11,6 +11,8 @@ GDPR friendly cookie compliance popup to prompt the user for consent.
 
 ## Usage
 
+The cookie name being stored is named `cookie-compliance-consent`.
+
 ```jsx
 import React, { Component } from 'react';
 import { combineReducers } from 'redux-immutable';
