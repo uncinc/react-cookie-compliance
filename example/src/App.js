@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 
-import CookieCompliance from 'react-cookie-compliance'
+import CookieCompliancePopup from '@uncinc/react-cookie-compliance'
 
 class App extends Component {
   getConsentStatus = () => {
@@ -30,9 +30,17 @@ class App extends Component {
         User agreed? <strong>{this.getConsentStatus()}</strong>
         </div>
 
-        <CookieCompliance>
-          Lorem ipsum
-        </CookieCompliance>
+        <CookieCompliancePopup agreeText="Yes" disagreeText="No">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at
+            pulvinar quam. Suspendisse pellentesque feugiat sagittis. Donec
+            dapibus enim nec consectetur venenatis. Curabitur quis vehicula mi.
+            &nbsp;
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+              I want to read more!
+            </a>
+          </p>
+        </CookieCompliancePopup>
       </div>
     )
   }

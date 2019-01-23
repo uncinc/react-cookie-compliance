@@ -4,7 +4,7 @@ import { combineReducers } from 'redux-immutable';
 import { hydrate } from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { cookieComplianceReducer } from 'react-cookie-compliance';
+import { cookieComplianceReducer } from '@uncinc/react-cookie-compliance';
 
 import './index.css'
 import App from './App'

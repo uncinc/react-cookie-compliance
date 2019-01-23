@@ -1,40 +1,45 @@
-# react-cookie-compliance
+# @uncinc/react-cookie-compliance
 
 > TODO
 
-[![NPM](https://img.shields.io/npm/v/react-cookie-compliance.svg)](https://www.npmjs.com/package/react-cookie-compliance) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@uncinc/react-cookie-compliance.svg)](https://www.npmjs.com/package/@uncinc/react-cookie-compliance) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
-- Yarn: `yarn add react-cookie-compliance`
-- NPM: `npm install --save react-cookie-compliance`
+- Yarn: `yarn add @uncinc/react-cookie-compliance`
+- NPM: `npm install --save @uncinc/react-cookie-compliance`
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import CookieCompliance, { cookieComplianceReducer } from 'react-cookie-compliance'
+import CookieCompliancePopup, { cookieComplianceReducer } from '@uncinc/react-cookie-compliance';
 
 class Example extends Component {
   render () {
     return (
-      <CookieCompliance agreeText="Yes" disagreeText="no" readMoreLink="https://..." readMoreText="I want to read more!">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet
-        at quam a volutpat. Pellentesque convallis mollis diam, et elementum
-        justo volutpat sit amet. Sed vel tincidunt nisi, quis faucibus.
-      </CookieCompliance
-    )
+      <CookieCompliancePopup agreeText="Yes" disagreeText="No">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at
+          pulvinar quam. Suspendisse pellentesque feugiat sagittis. Donec
+          dapibus enim nec consectetur venenatis. Curabitur quis vehicula mi.
+          &nbsp;
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            I want to read more!
+          </a>
+        </p>
+      </CookieCompliancePopup>
+    );
   }
 }
 
-..
+...
 
 # Add the reducer.
 const rootReducer = combineReducers({
   cookieCompliance: cookieComplianceReducer,
 });
-
 ```
 
 # Development
@@ -49,10 +54,11 @@ const rootReducer = combineReducers({
 
 If you want to test locally before publishing you have to use `npm pack`.
 Normally you can use `yarn link` or `npm link` but since we have a connected
-component, this does not work. Besides, using `npm pack` emulates a package at
-its best.
+component, this does not work because it will use react-redux from
+dev-dependencies instead of the react-redux from the main app. Besides, using
+`npm pack` emulates a package at its best.
 
-1) In the root run `npm pack`, this will generate <package-name>-<version>.tgz
+1) In the root run `npm pack`, this will generate <package-name>-<package-version>.tgz
 
 2) Go to your main app (where you use this package) and run:
 

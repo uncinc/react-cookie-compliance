@@ -4,9 +4,9 @@ import Cookies from 'js-cookie';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { cookieComplianceConsent } from '../actions/cookieCompliance';
-import './CookieCompliance.scss';
+import './CookieCompliancePopup.scss';
 
-class CookieCompliance extends Component {
+class CookieCompliancePopup extends Component {
   constructor(props) {
     super(props);
     this.hideNotificationTimeoutId = null;
@@ -59,18 +59,7 @@ class CookieCompliance extends Component {
       <div className={classes}>
         <div className="cookie_compliance__inner_wrapper">
           <div className="cookie_compliance__content_container">
-            <p>
-              {this.props.children}
-              &nbsp;
-              {(this.props.readMoreLink && this.props.readMoreText) && (
-                <a
-                  className="cookie_compliance__content_container--link"
-                  href={this.props.readMoreLink}
-                >
-                  {this.props.readMoreText}
-                </a>
-              )}
-            </p>
+            {this.props.children}
           </div>
 
           <div className="cookie_compliance__buttons-container">
@@ -93,19 +82,12 @@ class CookieCompliance extends Component {
   }
 }
 
-CookieCompliance.defaultProps = {
-  readMoreLink: false,
-  readMoreText: 'Lees meer',
+CookieCompliancePopup.defaultProps = {
   agreeText: 'Ja',
   disagreeText: 'Nee',
 };
 
-CookieCompliance.propTypes = {
-  readMoreLink: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.string,
-  ]),
-  readMoreText: PropTypes.string,
+CookieCompliancePopup.propTypes = {
   agreeText: PropTypes.string,
   disagreeText: PropTypes.string,
 };
@@ -116,4 +98,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(CookieCompliance);
+export default connect(mapStateToProps)(CookieCompliancePopup);

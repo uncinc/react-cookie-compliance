@@ -52,12 +52,8 @@ $screen-md: 720px;
       line-height: 1.27;
     }
 
-    &--link {
-      color: $color--link !important;
-      &:before,
-      &:after {
-        background-color: $color--link !important;
-      }
+    a {
+      color: $color--link;
     }
   }
 
