@@ -87,4 +87,4 @@ recognize them as peers and not try to bundle them in your module.
 
 ## License
 
-Apache License © [Unc Inc](https://github.com/uncinc)
+Apache License 2.0 © [Unc Inc](https://github.com/uncinc)
