@@ -41,7 +41,12 @@ class App extends Component {
         </div>
         {/* -- /DEBUG INFO -- */}
 
-        <CookieCompliancePopup agreeText="Yes" disagreeText="No">
+        <CookieCompliancePopup
+          agreeText="Yes"
+          disagreeText="No"
+          onAgree={() => console.log('User agreed.')}
+          onDisagree={() => console.log('User disagreed.')}
+        >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at
             pulvinar quam. Suspendisse pellentesque feugiat sagittis. Donec

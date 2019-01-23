@@ -43,6 +43,12 @@ class CookieCompliancePopup extends Component {
   onConsent = (didConsent) => {
     return () => {
       this.props.dispatch(cookieComplianceConsent(didConsent));
+
+      if (didConsent) {
+        this.props.onAgree();
+      } else {
+        this.props.onDisagree();
+      }
     };
   }
 
@@ -85,11 +91,15 @@ class CookieCompliancePopup extends Component {
 CookieCompliancePopup.defaultProps = {
   agreeText: 'Ja',
   disagreeText: 'Nee',
+  onAgree: () => {},
+  onDisagree: () => {},
 };
 
 CookieCompliancePopup.propTypes = {
   agreeText: PropTypes.string,
   disagreeText: PropTypes.string,
+  onAgree: PropTypes.func,
+  onDisagree: PropTypes.func,
 };
 
 function mapStateToProps(state) {

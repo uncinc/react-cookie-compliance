@@ -25,6 +25,7 @@ $screen-md: 720px;
   align-items: center;
   justify-content: center;
   z-index: 200;
+  pointer-events: none;
 
   &__hidden {
     animation: slide 1s;
@@ -40,6 +41,7 @@ $screen-md: 720px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    pointer-events: all;
   }
 
   &__content_container {
