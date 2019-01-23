@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Cookies from 'js-cookie';
 import { connect } from 'react-redux';
 
 import CookieCompliancePopup from '@uncinc/react-cookie-compliance'
@@ -14,9 +15,15 @@ class App extends Component {
     }
   }
 
+  removeCookie = () => {
+    Cookies.remove('cookie-compliance-consent');
+    window.location.reload();
+  }
+
   render () {
     return (
       <div style={{ padding: 20, lineHeight: 2 }}>
+        {/* -- DEBUG INFO -- */}
         <div>
           <div><strong>null</strong>: No consent has been given</div>
           <div><strong>true</strong>: Consent has been given and has been agreed</div>
@@ -29,6 +36,10 @@ class App extends Component {
         <div>
         User agreed? <strong>{this.getConsentStatus()}</strong>
         </div>
+        <div>
+          <button onClick={this.removeCookie}>Remove cookie</button>
+        </div>
+        {/* -- /DEBUG INFO -- */}
 
         <CookieCompliancePopup agreeText="Yes" disagreeText="No">
           <p>
