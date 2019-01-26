@@ -5,7 +5,7 @@ import {
   cookieComplianceConsent,
 } from './cookieCompliance';
 
-describe('CookieCompliancePopup reducer', () => {
+describe('CookieCompliancePopup actions', () => {
 
   it('should return a cookieComplianceConsent action object and where the cookie value is true', () => {
     const action = cookieComplianceConsent(true);
