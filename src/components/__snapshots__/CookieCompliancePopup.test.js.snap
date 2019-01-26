@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CookieCompliancePopup component should match its snapshot with default props 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CookieCompliancePopup)>
+    <CookieCompliancePopup
+      agreeText="Ja"
+      didConsent={null}
+      disagreeText="Nee"
+      dispatch={[Function]}
+      onAgree={[Function]}
+      onDisagree={[Function]}
+    >
+      <div
+        className="cookie_compliance"
+      >
+        <div
+          className="cookie_compliance__inner_wrapper"
+        >
+          <div
+            className="cookie_compliance__content_container"
+          />
+          <div
+            className="cookie_compliance__buttons-container"
+          >
+            <div
+              className="cookie_compliance__button cookie_compliance__button--agree"
+              onClick={[Function]}
+            >
+              Ja
+            </div>
+            <div
+              className="cookie_compliance__button cookie_compliance__button--disagree"
+              onClick={[Function]}
+            >
+              Nee
+            </div>
+          </div>
+        </div>
+      </div>
+    </CookieCompliancePopup>
+  </Connect(CookieCompliancePopup)>
+</Provider>
+`;
+
+exports[`CookieCompliancePopup component should render the agreeText prop its input 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CookieCompliancePopup)
+    agreeText="Yes, please!"
+  >
+    <CookieCompliancePopup
+      agreeText="Yes, please!"
+      didConsent={null}
+      disagreeText="Nee"
+      dispatch={[Function]}
+      onAgree={[Function]}
+      onDisagree={[Function]}
+    >
+      <div
+        className="cookie_compliance"
+      >
+        <div
+          className="cookie_compliance__inner_wrapper"
+        >
+          <div
+            className="cookie_compliance__content_container"
+          />
+          <div
+            className="cookie_compliance__buttons-container"
+          >
+            <div
+              className="cookie_compliance__button cookie_compliance__button--agree"
+              onClick={[Function]}
+            >
+              Yes, please!
+            </div>
+            <div
+              className="cookie_compliance__button cookie_compliance__button--disagree"
+              onClick={[Function]}
+            >
+              Nee
+            </div>
+          </div>
+        </div>
+      </div>
+    </CookieCompliancePopup>
+  </Connect(CookieCompliancePopup)>
+</Provider>
+`;
+
+exports[`CookieCompliancePopup component should render the disagreeText prop its input 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CookieCompliancePopup)
+    disagreeText="Nope"
+  >
+    <CookieCompliancePopup
+      agreeText="Ja"
+      didConsent={null}
+      disagreeText="Nope"
+      dispatch={[Function]}
+      onAgree={[Function]}
+      onDisagree={[Function]}
+    >
+      <div
+        className="cookie_compliance"
+      >
+        <div
+          className="cookie_compliance__inner_wrapper"
+        >
+          <div
+            className="cookie_compliance__content_container"
+          />
+          <div
+            className="cookie_compliance__buttons-container"
+          >
+            <div
+              className="cookie_compliance__button cookie_compliance__button--agree"
+              onClick={[Function]}
+            >
+              Ja
+            </div>
+            <div
+              className="cookie_compliance__button cookie_compliance__button--disagree"
+              onClick={[Function]}
+            >
+              Nope
+            </div>
+          </div>
+        </div>
+      </div>
+    </CookieCompliancePopup>
+  </Connect(CookieCompliancePopup)>
+</Provider>
+`;

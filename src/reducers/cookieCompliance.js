@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable';
 import { COOKIE_COMPLIANCE_CONSENT } from '../actions/cookieCompliance';
 
-const initialState = fromJS({
+export const initialState = fromJS({
   didConsent: null,
 });
 
