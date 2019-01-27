@@ -6,9 +6,9 @@ import { Map, fromJS } from 'immutable';
 import configureStore from 'redux-mock-store';
 import Cookies from 'js-cookie';
 
-import reducer, { initialState as initialCookieComplianceState } from '../reducers/cookieCompliance';
-import { cookieComplianceConsent } from '../actions/cookieCompliance';
-import CookieCompliancePopup from './CookieCompliancePopup';
+import reducer, { initialState as initialCookieComplianceState } from '../../reducers/cookieCompliance';
+import { cookieComplianceConsent } from '../../actions/cookieCompliance';
+import CookieCompliancePopup from '../CookieCompliancePopup';
 
 const mockStore = configureStore();
 

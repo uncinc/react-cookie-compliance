@@ -1,9 +1,14 @@
 import { fromJS } from 'immutable';
 
-import reducer, { initialState as initialCookieComplianceState } from './cookieCompliance';
-import { cookieComplianceConsent } from '../actions/cookieCompliance';
+import reducer, { initialState as initialCookieComplianceState } from '../cookieCompliance';
+import { cookieComplianceConsent } from '../../actions/cookieCompliance';
 
 describe('CookieCompliancePopup reducer', () => {
+
+  it('should return the default state', () => {
+    const state = reducer();
+    expect(state).toEqual(initialCookieComplianceState);
+  });
 
   it('should set the didConsent property to true', () => {
     const action = cookieComplianceConsent(true);

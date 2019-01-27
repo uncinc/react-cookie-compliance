@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 import {
   COOKIE_COMPLIANCE_CONSENT,
   cookieComplianceConsent,
-} from './cookieCompliance';
+} from '../cookieCompliance';
 
 describe('CookieCompliancePopup actions', () => {
 
