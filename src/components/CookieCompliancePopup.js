@@ -9,7 +9,7 @@ import './CookieCompliancePopup.scss';
 class CookieCompliancePopup extends Component {
   constructor(props) {
     super(props);
-    this.hideNotificationTimeoutId = null;
+    this.hidePopupTimeoutId = null;
 
     this.state = {
       hidden: true,
@@ -30,14 +30,14 @@ class CookieCompliancePopup extends Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.didConsent === null && this.props.didConsent === true) {
-      this.hideNotificationTimeoutId = setTimeout(() => {
+      this.hidePopupTimeoutId = setTimeout(() => {
         this.setState({ hidden: true });
       }, 1000);
     }
   }
 
   componentWillUnmount() {
-    clearTimeout(this.hideNotificationTimeoutId);
+    clearTimeout(this.hidePopupTimeoutId);
   }
 
   onConsent = (didConsent) => {
