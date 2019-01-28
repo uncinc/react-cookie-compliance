@@ -30,6 +30,8 @@ module.exports = {
     // Ensure no unused prop types.
     "react/no-unused-prop-types": 1,
 
+    // Enforce consistent usage of destructuring assignment of props, state, and
+    // context.
     "react/destructuring-assignment": 0,
 
     // Ensure correct spacing around the arrow in an arrow-function.
