@@ -1,6 +1,6 @@
 {
   "name": "@uncinc/react-cookie-compliance",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "GDPR friendly cookie compliance popup to prompt the user for consent.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

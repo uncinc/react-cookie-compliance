@@ -1,6 +1,6 @@
 # @uncinc/react-cookie-compliance
 
-GDPR friendly cookie compliance popup to prompt the user for consent.
+GDPR friendly cookie compliance popup to prompt the user for consent, built with ImmutableJS.
 
 [![NPM](https://img.shields.io/npm/v/@uncinc/react-cookie-compliance.svg)](https://www.npmjs.com/package/@uncinc/react-cookie-compliance)
 [![Code Coverage](https://codecov.io/gh/uncinc/react-cookie-compliance/branch/master/graph/badge.svg)](https://codecov.io/gh/uncinc/react-cookie-compliance)
