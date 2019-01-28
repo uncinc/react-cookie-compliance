@@ -21,7 +21,7 @@ import { combineReducers } from 'redux-immutable';
 
 import CookieCompliancePopup, { cookieComplianceReducer } from '@uncinc/react-cookie-compliance';
 
-# Add the reducer.
+// Add the reducer.
 const rootReducer = combineReducers({
   cookieCompliance: cookieComplianceReducer,
   ...
