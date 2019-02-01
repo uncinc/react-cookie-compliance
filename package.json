@@ -1,6 +1,6 @@
 {
   "name": "@uncinc/react-cookie-compliance",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "GDPR friendly cookie compliance popup to prompt the user for consent.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -24,8 +24,9 @@
     ]
   },
   "scripts": {
-    "test": "cross-env CI=1 react-scripts test --env=jsdom --coverage --setupTestFrameworkScriptFile=./config/jest/setup.js",
+    "test": "react-scripts test --env=jsdom --coverage --setupTestFrameworkScriptFile=./config/jest/setup.js",
     "test:watch": "react-scripts test --env=jsdom --watchAll --setupTestFrameworkScriptFile=./config/jest/setup.js",
+    "test:update": "react-scripts test --env=jsdom --coverage --setupTestFrameworkScriptFile=./config/jest/setup.js --updateSnapshot",
     "test:coverage": "yarn test && codecov",
     "build": "yarn eslint && yarn test && rm -rf ./dist && rollup -c",
     "start": "rollup -c -w",

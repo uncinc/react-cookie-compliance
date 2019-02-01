@@ -57,26 +57,26 @@ class CookieCompliancePopup extends Component {
       return null;
     }
 
-    const classes = classNames('cookie_compliance', {
-      cookie_compliance__hidden: this.props.didConsent !== null,
+    const classes = classNames('cookie_compliance_popup', this.props.className, {
+      cookie_compliance_popup__hidden: this.props.didConsent !== null,
     });
 
     return (
       <div className={classes}>
-        <div className="cookie_compliance__inner_wrapper">
-          <div className="cookie_compliance__content_container">
+        <div className="cookie_compliance_popup__inner_wrapper">
+          <div className="cookie_compliance_popup__content_container">
             {this.props.children}
           </div>
 
-          <div className="cookie_compliance__buttons-container">
+          <div className="cookie_compliance_popup__buttons-container">
             <div
-              className="cookie_compliance__button cookie_compliance__button--agree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--agree"
               onClick={this.onConsent(true)}
             >
               {this.props.agreeText}
             </div>
             <div
-              className="cookie_compliance__button cookie_compliance__button--disagree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--disagree"
               onClick={this.onConsent(false)}
             >
               {this.props.disagreeText}

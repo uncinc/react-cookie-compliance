@@ -44,7 +44,7 @@ describe('CookieCompliancePopup component', () => {
     component.instance().componentDidMount();
 
     expect(
-      component.find('.cookie_compliance__button--agree').text()
+      component.find('.cookie_compliance_popup__button--agree').text()
     ).toEqual(agreeText);
 
     expect(toJson(component)).toMatchSnapshot();
@@ -55,7 +55,7 @@ describe('CookieCompliancePopup component', () => {
     const component = renderComponent(store, { disagreeText });
 
     expect(
-      component.find('.cookie_compliance__button--disagree').text()
+      component.find('.cookie_compliance_popup__button--disagree').text()
     ).toEqual(disagreeText);
 
     expect(toJson(component)).toMatchSnapshot();
@@ -67,7 +67,7 @@ describe('CookieCompliancePopup component', () => {
       onAgree: onAgreeCallback,
     });
 
-    component.find('.cookie_compliance__button--agree').simulate('click');
+    component.find('.cookie_compliance_popup__button--agree').simulate('click');
     expect(onAgreeCallback).toHaveBeenCalled();
 
     const action = cookieComplianceConsent(true);
@@ -85,7 +85,7 @@ describe('CookieCompliancePopup component', () => {
       onDisagree: onDisagreeCallback,
     });
 
-    component.find('.cookie_compliance__button--disagree').simulate('click');
+    component.find('.cookie_compliance_popup__button--disagree').simulate('click');
     expect(onDisagreeCallback).toHaveBeenCalled();
 
     const action = cookieComplianceConsent(false);

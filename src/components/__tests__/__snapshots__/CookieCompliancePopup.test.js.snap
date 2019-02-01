@@ -23,25 +23,25 @@ exports[`CookieCompliancePopup component should match its snapshot with default 
       onDisagree={[Function]}
     >
       <div
-        className="cookie_compliance"
+        className="cookie_compliance_popup"
       >
         <div
-          className="cookie_compliance__inner_wrapper"
+          className="cookie_compliance_popup__inner_wrapper"
         >
           <div
-            className="cookie_compliance__content_container"
+            className="cookie_compliance_popup__content_container"
           />
           <div
-            className="cookie_compliance__buttons-container"
+            className="cookie_compliance_popup__buttons-container"
           >
             <div
-              className="cookie_compliance__button cookie_compliance__button--agree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--agree"
               onClick={[Function]}
             >
               Ja
             </div>
             <div
-              className="cookie_compliance__button cookie_compliance__button--disagree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--disagree"
               onClick={[Function]}
             >
               Nee
@@ -79,25 +79,25 @@ exports[`CookieCompliancePopup component should render the agreeText prop its in
       onDisagree={[Function]}
     >
       <div
-        className="cookie_compliance"
+        className="cookie_compliance_popup"
       >
         <div
-          className="cookie_compliance__inner_wrapper"
+          className="cookie_compliance_popup__inner_wrapper"
         >
           <div
-            className="cookie_compliance__content_container"
+            className="cookie_compliance_popup__content_container"
           />
           <div
-            className="cookie_compliance__buttons-container"
+            className="cookie_compliance_popup__buttons-container"
           >
             <div
-              className="cookie_compliance__button cookie_compliance__button--agree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--agree"
               onClick={[Function]}
             >
               Yes, please!
             </div>
             <div
-              className="cookie_compliance__button cookie_compliance__button--disagree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--disagree"
               onClick={[Function]}
             >
               Nee
@@ -135,25 +135,25 @@ exports[`CookieCompliancePopup component should render the disagreeText prop its
       onDisagree={[Function]}
     >
       <div
-        className="cookie_compliance"
+        className="cookie_compliance_popup"
       >
         <div
-          className="cookie_compliance__inner_wrapper"
+          className="cookie_compliance_popup__inner_wrapper"
         >
           <div
-            className="cookie_compliance__content_container"
+            className="cookie_compliance_popup__content_container"
           />
           <div
-            className="cookie_compliance__buttons-container"
+            className="cookie_compliance_popup__buttons-container"
           >
             <div
-              className="cookie_compliance__button cookie_compliance__button--agree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--agree"
               onClick={[Function]}
             >
               Ja
             </div>
             <div
-              className="cookie_compliance__button cookie_compliance__button--disagree"
+              className="cookie_compliance_popup__button cookie_compliance_popup__button--disagree"
               onClick={[Function]}
             >
               Nope
