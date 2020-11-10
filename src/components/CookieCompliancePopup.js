@@ -18,9 +18,9 @@ class CookieCompliancePopup extends Component {
   componentDidMount() {
     const { didConsent } = this.props;
 
-    if (didConsent === "true") {
+    if (didConsent === true) {
       this.props.dispatch(cookieComplianceConsent(true));
-    } else if (didConsent === "false") {
+    } else if (didConsent === false) {
       this.props.dispatch(cookieComplianceConsent(false));
     } else {
       // Did not consent yet, so prompt the user.
