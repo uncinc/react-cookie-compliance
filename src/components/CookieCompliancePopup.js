@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Cookies from 'js-cookie';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { cookieComplianceConsent } from '../actions/cookieCompliance';
@@ -17,7 +16,8 @@ class CookieCompliancePopup extends Component {
   }
 
   componentDidMount() {
-    const didConsent = Cookies.get('cookie-compliance-consent');
+    const { didConsent } = this.props;
+
     if (didConsent === "true") {
       this.props.dispatch(cookieComplianceConsent(true));
     } else if (didConsent === "false") {
@@ -29,7 +29,7 @@ class CookieCompliancePopup extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.didConsent === null && this.props.didConsent === true) {
+    if (prevProps.didConsent === undefined && this.props.didConsent === true) {
       this.hidePopupTimeoutId = setTimeout(() => {
         this.setState({ hidden: true });
       }, 1000);
@@ -58,7 +58,7 @@ class CookieCompliancePopup extends Component {
     }
 
     const classes = classNames('cookie_compliance_popup', this.props.className, {
-      cookie_compliance_popup__hidden: this.props.didConsent !== null,
+      cookie_compliance_popup__hidden: this.props.didConsent !== undefined,
     });
 
     return (
