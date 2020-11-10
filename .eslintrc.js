@@ -391,7 +391,7 @@ module.exports = {
     "no-multi-assign": 1,
 
     // Disallow use of undefined variable (off by default).
-    "no-undefined": 2,
+    "no-undefined": 1,
 
     // Disallow declaration of variables that are not used in the code.
     "no-unused-vars": [1, { "args": "none", "ignoreRestSiblings": true }],
