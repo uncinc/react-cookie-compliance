@@ -29,7 +29,7 @@ class CookieCompliancePopup extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.didConsent === undefined && this.props.didConsent === true) {
+    if (prevProps.didConsent === null && this.props.didConsent === true) {
       this.hidePopupTimeoutId = setTimeout(() => {
         this.setState({ hidden: true });
       }, 1000);
@@ -58,7 +58,7 @@ class CookieCompliancePopup extends Component {
     }
 
     const classes = classNames('cookie_compliance_popup', this.props.className, {
-      cookie_compliance_popup__hidden: this.props.didConsent !== undefined,
+      cookie_compliance_popup__hidden: this.props.didConsent !== null,
     });
 
     return (

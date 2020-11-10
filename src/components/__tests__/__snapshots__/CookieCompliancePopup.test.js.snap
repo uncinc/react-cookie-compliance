@@ -16,6 +16,7 @@ exports[`CookieCompliancePopup component should match its snapshot with default 
   <Connect(CookieCompliancePopup)>
     <CookieCompliancePopup
       agreeText="Ja"
+      didConsent={null}
       disagreeText="Nee"
       dispatch={[Function]}
       onAgree={[Function]}
@@ -71,6 +72,7 @@ exports[`CookieCompliancePopup component should render the agreeText prop its in
   >
     <CookieCompliancePopup
       agreeText="Yes, please!"
+      didConsent={null}
       disagreeText="Nee"
       dispatch={[Function]}
       onAgree={[Function]}
@@ -126,6 +128,7 @@ exports[`CookieCompliancePopup component should render the disagreeText prop its
   >
     <CookieCompliancePopup
       agreeText="Ja"
+      didConsent={null}
       disagreeText="Nope"
       dispatch={[Function]}
       onAgree={[Function]}
