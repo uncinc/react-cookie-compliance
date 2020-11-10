@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Cookies from 'js-cookie';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { cookieComplianceConsent } from '../actions/cookieCompliance';
@@ -17,10 +16,11 @@ class CookieCompliancePopup extends Component {
   }
 
   componentDidMount() {
-    const didConsent = Cookies.get('cookie-compliance-consent');
-    if (didConsent === "true") {
+    const { didConsent } = this.props;
+
+    if (didConsent === true) {
       this.props.dispatch(cookieComplianceConsent(true));
-    } else if (didConsent === "false") {
+    } else if (didConsent === false) {
       this.props.dispatch(cookieComplianceConsent(false));
     } else {
       // Did not consent yet, so prompt the user.

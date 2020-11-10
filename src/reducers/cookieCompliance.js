@@ -1,8 +1,32 @@
 import { fromJS } from 'immutable';
+import Cookies from 'js-cookie';
+
 import { COOKIE_COMPLIANCE_CONSENT } from '../actions/cookieCompliance';
 
+
+/**
+ * Get consent from cookie and cast to boolean if applicable.
+ * @return {(null|boolean)} null if cookie has not been set.
+ */
+function getConsentFromCookie() {
+  const cookie = Cookies.get('cookie-compliance-consent');
+  switch (cookie) {
+    case 'true': {
+      return true;
+    }
+
+    case 'false': {
+      return false;
+    }
+
+    default: {
+      return null;
+    }
+  }
+}
+
 export const initialState = fromJS({
-  didConsent: null,
+  didConsent: getConsentFromCookie(),
 });
 
 export default function cookieCompliance(state = initialState, action = {}) {

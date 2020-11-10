@@ -29,7 +29,6 @@ describe('CookieCompliancePopup component', () => {
       cookieCompliance: initialCookieComplianceState,
     }));
     store.dispatch = jest.fn();
-
     Cookies.remove('cookie-compliance-consent');
   });
 
@@ -98,15 +97,23 @@ describe('CookieCompliancePopup component', () => {
   });
 
   it('should not render when consent has been agreed', () => {
-    Cookies.set('cookie-compliance-consent', true);
+    store = mockStore(Map({
+      cookieCompliance: {
+        didConsent: true,
+      },
+    }));
     const component = renderComponent(store);
-    expect(component.html()).toBe(null);
+    expect(component.html()).toBe("");
   });
 
   it('should not render when consent has been disagreed', () => {
-    Cookies.set('cookie-compliance-consent', false);
+    store = mockStore(Map({
+      cookieCompliance: {
+        didConsent: false,
+      },
+    }));
     const component = renderComponent(store);
-    expect(component.html()).toBe(null);
+    expect(component.html()).toBe("");
   });
 
   it('should render when consent has not been given yet', () => {
