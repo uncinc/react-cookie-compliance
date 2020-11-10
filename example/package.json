@@ -5,13 +5,13 @@
   "private": true,
   "dependencies": {
     "@uncinc/react-cookie-compliance": "link:..",
+    "immutable": "^4.0.0-rc.12",
+    "js-cookie": "^2.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "redux-immutable": "^4.0.0",
-    "immutable": "^4.0.0-rc.12",
-    "js-cookie": "^2.2.0"
+    "redux-immutable": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
